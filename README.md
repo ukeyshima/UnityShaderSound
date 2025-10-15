@@ -19,6 +19,8 @@ If want to see sample scene, please download from Samples.
 
 2. Write Compute Shader
 ```
+#include "Packages/com.ukeyshima.unityshadersound/Runtime/Shaders/Include/ShaderSound.hlsl"
+
 [numthreads(8, 1, 1)]
 void Main (uint3 id : SV_DispatchThreadID)
 {
