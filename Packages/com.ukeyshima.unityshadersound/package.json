@@ -1,0 +1,15 @@
+{
+  "name": "com.ukeyshima.unityshadersound",
+  "version": "1.0.0",
+  "displayName": "UnityShaderSound",
+  "description": "Shader Sound for Unity",
+  "unity": "6000.1",
+  "samples": [
+    {
+      "displayName": "Sample",
+      "description": "Sample",
+      "path": "Sample"
+    }
+  ],
+  "type": "library"
+}

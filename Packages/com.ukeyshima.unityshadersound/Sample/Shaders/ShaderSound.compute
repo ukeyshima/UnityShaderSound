@@ -1,0 +1,25 @@
+#pragma kernel Main
+
+#include "Packages/com.ukeyshima.unityshadersound/Runtime/Shaders/Include/ShaderSound.hlsl"
+
+#define BPM 140
+#define BPS (BPM / 60.0)
+#define TIME2BEAT(TIME) (frac(TIME * BPS) / BPS)
+#define PI (3.14159265358979323846)
+
+float kick(float t)
+{
+    float decay = exp(-t * t * 35.0);
+    float phase = 15.0 * t - exp(-t * 400.0) * 20.0;
+    return decay * sin(2.0 * PI * phase);
+}
+
+[numthreads(8, 1, 1)]
+void Main (uint3 id : SV_DispatchThreadID)
+{
+    EARLY_RETURN(id.x)
+    float time = TIME(id.x);
+    float beat = TIME2BEAT(time);
+    float dest = kick(beat);
+    UPDATE_DATA(id.x, dest)
+}
