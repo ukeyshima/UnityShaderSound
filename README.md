@@ -14,8 +14,10 @@ https://github.com/ukeyshima/UnityShaderSound.git?path=/Packages/com.ukeyshima.u
 If want to see sample scene, please download from Samples.
 
 ## Usage
-1. Attach ShaderSound class to GameObject
-<img width="410" height="91" alt="スクリーンショット 2025-10-16 1 37 08" src="https://github.com/user-attachments/assets/8b123f3d-fc14-46a6-9610-383a1283c8ea" />
+1. Attach ShaderSound class and AudioSource to GameObject
+<img width="404" height="487" alt="スクリーンショット 2025-10-16 9 24 23" src="https://github.com/user-attachments/assets/9b49ff1f-4de0-4059-8f29-be1019f9ff5a" />
+
+※ Note: An AudioListener is required for any component.
 
 2. Write Compute Shader
 ```
